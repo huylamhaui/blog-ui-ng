@@ -1,4 +1,4 @@
-FROM node
+FROM angular/ngcontainer
 
 WORKDIR /opt/blog-ui
 
