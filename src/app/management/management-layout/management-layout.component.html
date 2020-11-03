@@ -1,0 +1,25 @@
+<div class="admin-layout-wraper">
+    <mat-drawer-container class="admin-layout-container">
+        <mat-drawer #adminNav [mode]="'side'" [opened]="true" class="nav-cls">
+            <app-admin-menu></app-admin-menu>
+        </mat-drawer>
+        <mat-drawer-content>
+            <mat-toolbar>
+                <button mat-icon-button class="example-icon" (click)="adminNav.toggle()"
+                    aria-label="Example icon-button with menu icon">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <span>My App</span>
+                <span class="example-spacer"></span>
+                <button mat-icon-button class="example-icon favorite-icon"
+                    aria-label="Example icon-button with heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+                    <mat-icon>share</mat-icon>
+                </button>
+            </mat-toolbar>
+            <router-outlet></router-outlet>
+        </mat-drawer-content>
+    </mat-drawer-container>
+</div>
