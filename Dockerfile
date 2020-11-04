@@ -5,7 +5,7 @@ WORKDIR /opt/blog-ui
 COPY . .
 COPY ./nginx.conf /etc/nginx/conf.d/blog.conf
 
-RUN ls
+RUN npm install
 
 RUN node_modules/.bin/ng build --prod
 
