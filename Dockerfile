@@ -1,9 +1,11 @@
-FROM angular/ngcontainer
+FROM nginx
 
 WORKDIR /opt/blog-ui
 
-COPY . .
+COPY ./nginx.conf /etc/nginx/conf.d/blog.conf
+COPY ./dist/blog-fe .
 
-EXPOSE 4200
+RUN ls
 
-ENTRYPOINT [ "ng", "serve" ]
+EXPOSE 80
+
