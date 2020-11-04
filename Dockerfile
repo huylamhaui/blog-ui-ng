@@ -6,7 +6,7 @@ COPY . .
 COPY ./nginx.conf /etc/nginx/conf.d/blog.conf
 
 RUN curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
-RUN sudo yum install nodejs
+RUN apt install nodejs
 RUN npm install
 
 RUN node_modules/.bin/ng build --prod
