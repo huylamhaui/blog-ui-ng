@@ -4,7 +4,7 @@ WORKDIR /usr/app
 COPY . .
 
 RUN npm install
-RUN node_modules/.bin/ng build --prod
+RUN npm run build
 
 
 FROM nginx
