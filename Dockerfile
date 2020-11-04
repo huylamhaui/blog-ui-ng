@@ -5,7 +5,7 @@ WORKDIR /opt/blog-ui
 COPY . .
 COPY ./nginx.conf /etc/nginx/conf.d/blog.conf
 
-RUN curl -sL https://rpm.nodesource.com/setup_10.x | sudo bash -
+RUN curl -sL https://rpm.nodesource.com/setup_10.x | bash -
 RUN apt install nodejs
 RUN npm install
 
